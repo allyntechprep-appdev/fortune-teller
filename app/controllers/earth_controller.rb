@@ -4,13 +4,13 @@ class EarthController < ApplicationController
 
     @array_of_numbers = Array.new
 
-    5.times do
+    5.times do |another_number|
       another_number = rand(1...100)
       
       @array_of_numbers.push(another_number)
     end
 
-    render({ :template => "au_naturale/taurus.html.erb" })
+    render({ :template => "nature_templates/taurus.html.erb" })
   end
 
   def maiden
@@ -19,7 +19,7 @@ class EarthController < ApplicationController
 
     @array_of_numbers = Array.new
 
-    5.times do
+    5.times do |another_number|
       another_number = rand(1...100)
       
       @array_of_numbers.push(another_number)
@@ -29,11 +29,11 @@ class EarthController < ApplicationController
   end
 
   def goat
-    prediction = "You could be on a real emotional high today because of your success and that of other household members, Capricorn. Your mind may be buzzing with ideas for future expansion, some of which may not be all that workable. However, you should allow yourself a few flights of fancy. Tomorrow your feet will be back on the ground and you will see things in a more practical light."
+    @horoscope = "You could be on a real emotional high today because of your success and that of other household members, Capricorn. Your mind may be buzzing with ideas for future expansion, some of which may not be all that workable. However, you should allow yourself a few flights of fancy. Tomorrow your feet will be back on the ground and you will see things in a more practical light."
 
     @array_of_numbers = Array.new
 
-    5.times do
+    5.times do |another_number|
       another_number = rand(1...100)
       
       @array_of_numbers.push(another_number)
